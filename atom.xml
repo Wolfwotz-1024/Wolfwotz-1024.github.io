@@ -6,7 +6,7 @@
   <link href="https://wolfwotz-1024.github.io/atom.xml" rel="self"/>
   
   <link href="https://wolfwotz-1024.github.io/"/>
-  <updated>2021-03-03T02:25:10.720Z</updated>
+  <updated>2021-03-03T07:28:52.014Z</updated>
   <id>https://wolfwotz-1024.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://wolfwotz-1024.github.io/2021/03/03/java-1/"/>
     <id>https://wolfwotz-1024.github.io/2021/03/03/java-1/</id>
     <published>2021-03-03T02:17:06.000Z</published>
-    <updated>2021-03-03T02:25:10.720Z</updated>
+    <updated>2021-03-03T07:28:52.014Z</updated>
     
     
       
@@ -33,6 +33,8 @@
       
     
     
+    
+    <category term="后端" scheme="https://wolfwotz-1024.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
     <category term="java编程第一节" scheme="https://wolfwotz-1024.github.io/tags/java%E7%BC%96%E7%A8%8B%E7%AC%AC%E4%B8%80%E8%8A%82/"/>
