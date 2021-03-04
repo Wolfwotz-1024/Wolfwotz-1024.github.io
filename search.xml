@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>2.HelloWorld入门程序</title>
+      <link href="2021/03/04/2-HelloWorld%E5%85%A5%E9%97%A8%E7%A8%8B%E5%BA%8F/"/>
+      <url>2021/03/04/2-HelloWorld%E5%85%A5%E9%97%A8%E7%A8%8B%E5%BA%8F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、程序开发步骤说明"><a href="#一、程序开发步骤说明" class="headerlink" title="一、程序开发步骤说明"></a>一、程序开发步骤说明</h1><p>Java程序开发三步骤：<strong>编写、编译、运行</strong></p><p><img src="/images/3_Java_Develop_Step.jpg" alt="1_Java_Develop_Step"></p><h1 id="二、编写Java源程序"><a href="#二、编写Java源程序" class="headerlink" title="二、编写Java源程序"></a>二、编写Java源程序</h1><ol><li>在某一目录下（例如：D:\java_1）创建一个文本文件，将其完整的文件名修改为<strong>HelloWorld.java</strong> , 其中文件名位<strong>HelloWorld</strong>，后面的后缀名必须是**.java**。</li><li>用记事本打开。</li><li>在文件中键入文本并保存，代码如下：</li></ol><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello, World!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p>文件名必须是<strong>HelloWorld</strong>， 保证文件名和类的名字是一致的，注意大小写。</p></blockquote><p>第一个<strong>HelloWorld</strong> 源程序就编写好了，但是这个文件是程序员编写的，JVM是看不懂的，也就不能运行，因此我们必须将编写好的<strong>Java源文件</strong>编译成JVM可以看懂的<strong>字节码文件</strong>。</p><h1 id="三、编译Java源文件"><a href="#三、编译Java源文件" class="headerlink" title="三、编译Java源文件"></a>三、编译Java源文件</h1><p>在DOS命令行中，进入Java源文件，使用<strong>javac</strong>命令进行编译。</p><p>命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javac Java源文件名.后缀名</span><br></pre></td></tr></table></figure><p>例如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javac HelloWorld.java</span><br></pre></td></tr></table></figure><p><img src="/images/4_Java_compile.jpg" alt="2_Java_compile"></p><p>编译成功后，命令行没有任何提示。打开其Java源文件目录，发现产生一个新的文件<strong>HelloWorld.class</strong>，该文件就是编译后的文件，是java的可运行文件，称为<font color = red size = 04>字节码文件</font>，有了字节码文件，就可以运行程序了。</p><blockquote><p>Java源文件的编译工具是 <strong>javac.exe</strong>.</p></blockquote><h1 id="四、运行Java程序"><a href="#四、运行Java程序" class="headerlink" title="四、运行Java程序"></a>四、运行Java程序</h1><p>在DOS命令行中，进入Java源文件的目录，使用<strong>java</strong>命令进行运行。</p><p>命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java 类名字</span><br></pre></td></tr></table></figure><p>举例：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java HelloWorld</span><br></pre></td></tr></table></figure><blockquote><p>上面命令中<font color=red size = 6> Java  HelloWorld 后面不要加.class</font></p><p>Java程序**.class** 文件的运行工具是<strong>java.exe</strong>,。</p></blockquote><h1 id="五、有关说明"><a href="#五、有关说明" class="headerlink" title="五、有关说明"></a>五、有关说明</h1><h2 id="1、编译和运行时两回事"><a href="#1、编译和运行时两回事" class="headerlink" title="1、编译和运行时两回事"></a>1、编译和运行时两回事</h2><ul><li>编译：是指将我们写的Java源文件翻译为JVM认识的class文件，在这个过程中，<strong>javac</strong>编译器会检查我们所写的程序是否有错误，有错误就提示出来，如果没有错误就会编译成功。</li><li>运行：是指将<strong>class文件</strong>交给JVM去运行，此时JVM就会执行我们编写的程序了。</li></ul><h2 id="2、有关main方法"><a href="#2、有关main方法" class="headerlink" title="2、有关main方法"></a>2、有关main方法</h2><ul><li>main方法：称为主方法，写法是固定格式不可以更改。main方法是程序的入口点或者起始点，无论我们编写多少程序，JVM在运行的时候，都会从main方法这里开始运行。</li></ul><h1 id="六、添加注释comment"><a href="#六、添加注释comment" class="headerlink" title="六、添加注释comment"></a>六、添加注释comment</h1><ul><li><p>注释：就是对代码的解释和说明，其目的是让人们能够更加轻松的了解代码，不影响程序的运行和编译。</p></li><li><p>Java中有单行注释和多行注释</p><p>​    $\nabla$ 单行注释以 <font color=orange><strong>//注释</strong> </font>，换行结束</p><p>​    $\nabla$ 多行注释以 <font color=orange><strong>/* 注释 */</strong> </font>，以*/* <em>开头吗，以</em> * <em>/</em>  结束</p></li></ul><h1 id="七、关键字keywords"><a href="#七、关键字keywords" class="headerlink" title="七、关键字keywords"></a>七、关键字keywords</h1><ul><li><p>关键字：是指程序中，Java已经定义好的单词，具有特殊含义。</p><p>​     $\nabla$ HelloWorld 案例中，出现的关键字有<strong>public</strong>、<strong>class</strong>、<strong>static</strong>、<strong>void</strong> 等，这些单词已经被Java定义好，全部都是小写字母。</p></li></ul><h1 id="八、标识符"><a href="#八、标识符" class="headerlink" title="八、标识符"></a><font color = red>八、标识符</font></h1><h2 id="1、标识符"><a href="#1、标识符" class="headerlink" title="1、标识符"></a>1、标识符</h2><ul><li>是指在程序中，我们自己定义内容。例如类的名字，方法的名字和变量的名字等等，都是标识符。</li></ul><h2 id="2、命名规则：硬性要求"><a href="#2、命名规则：硬性要求" class="headerlink" title="2、命名规则：硬性要求"></a><font color = red>2、命名规则：硬性要求</font></h2><ul><li>标识符可以包含英文字母26个（区分大小写）、0-9、$和_ </li><li>标识符不能以数字开头</li><li>标识符不能是关键字</li></ul><h2 id="3、命名规范：软性建议"><a href="#3、命名规范：软性建议" class="headerlink" title="3、命名规范：软性建议"></a><font color = red>3、命名规范：软性建议</font></h2><ul><li>类名规范：首字母大写，后面的每个单词首字母大写（大驼峰式）</li><li>方法名规范：首字母小写，后面每个单词首字母大写（小驼峰式）</li><li>变量名规范：全部小写</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 后端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>1.Java语言开发环境</title>
+      <link href="2021/03/04/1-Java%E8%AF%AD%E8%A8%80%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+      <url>2021/03/04/1-Java%E8%AF%AD%E8%A8%80%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、Java-虚拟机——JVM"><a href="#一、Java-虚拟机——JVM" class="headerlink" title="一、Java 虚拟机——JVM"></a>一、Java 虚拟机——JVM</h1><ul><li>JVM（Java Virtual Machine）：Java虚拟机，简称为JVM，是运行所有Javach程序的假象计算机，是Java程序的运行环境，是Java最具吸引力的特征之一。我们编写的Java代码，都运行在JVM之上。</li><li>跨平台：任何软件的运行，都必须要运行在操作系统上，而我们用Java编写的软件可以运行在任何的操作系统上，这个特性称为Java语言的跨平台特征。该特征由JVM实现，我们编写的程序运行在JVM上，而JVM运行在操作系统上。<img src="/images/1_JVM.jpg" alt="1_JVM"></li></ul><p>如同所示，Java的虚拟机本身不不具备跨平台性，每个操作系统都有不同版本的虚拟机。</p><h1 id="二、JRE和JDK"><a href="#二、JRE和JDK" class="headerlink" title="二、JRE和JDK"></a>二、JRE和JDK</h1><ul><li> JRE（Java Runtime Entironment）: 是Java程序的运行时环境，包括JVM和运行时所需要的核心类库。</li><li>JDK（Java Development Kit）：是Java程序开发工具包，包括JRE和开发人员使用的工具。</li></ul><p>我们想要运行一个已有的Java程序，那么需要安装 <em>JRE</em> 即可。</p><p>我们想要开发一个全新的Java程序，那么需要安装 <em>JDK</em>。</p><p>有关JVM，JRE，JDK三者的关系：</p><p><img src="/images/2_JVM_JRE_JDK.jpg" alt="2_JVM_JRE_JDK"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 后端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="2021/03/03/hello-world/"/>
+      <url>2021/03/03/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
