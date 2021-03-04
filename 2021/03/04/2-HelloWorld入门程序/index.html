@@ -422,7 +422,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    903
+                    898
                 </div>
                 
 
@@ -456,19 +456,20 @@
 <li>用记事本打开。</li>
 <li>在文件中键入文本并保存，代码如下：</li>
 </ol>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-</code></pre>
-<blockquote>
-<p>文件名必须是<strong>HelloWorld</strong>， 保证文件名和类的名字是一致的，注意大小写。</p>
-</blockquote>
-<p>第一个<strong>HelloWorld</strong> 源程序就编写好了，但是这个文件是程序员编写的，JVM是看不懂的，也就不能运行，因此我们必须将编写好的<strong>Java源文件</strong>编译成JVM可以看懂的<strong>字节码文件</strong>。</p>
-<h1 id="三、编译Java源文件"><a href="#三、编译Java源文件" class="headerlink" title="三、编译Java源文件"></a>三、编译Java源文件</h1><p>在DOS命令行中，进入Java源文件，使用<strong>javac</strong>命令进行编译。</p>
-<p>命令：</p>
-<pre class=" language-bash"><code class="language-bash">javac Java源文件名.后缀名
+<p>(```java<br>public class HelloWorld{<br>    public static void main(String[] args){<br>        System.out.println(“Hello, World!”);<br>    }<br>}</p>
+<pre class=" language-)"><code class="language-)">
+> 文件名必须是**HelloWorld**， 保证文件名和类的名字是一致的，注意大小写。
+
+第一个**HelloWorld** 源程序就编写好了，但是这个文件是程序员编写的，JVM是看不懂的，也就不能运行，因此我们必须将编写好的**Java源文件**编译成JVM可以看懂的**字节码文件**。
+
+# 三、编译Java源文件
+
+在DOS命令行中，进入Java源文件，使用**javac**命令进行编译。
+
+命令：
+
+```bash
+javac Java源文件名.后缀名
 </code></pre>
 <p>例如：</p>
 <pre class=" language-bash"><code class="language-bash">javac HelloWorld.java
