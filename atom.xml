@@ -6,7 +6,7 @@
   <link href="https://wolfwotz-1024.github.io/atom.xml" rel="self"/>
   
   <link href="https://wolfwotz-1024.github.io/"/>
-  <updated>2021-03-05T15:05:25.792Z</updated>
+  <updated>2021-03-07T14:24:29.435Z</updated>
   <id>https://wolfwotz-1024.github.io/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>5.运算符</title>
+    <link href="https://wolfwotz-1024.github.io/2021/03/07/5-%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+    <id>https://wolfwotz-1024.github.io/2021/03/07/5-%E8%BF%90%E7%AE%97%E7%AC%A6/</id>
+    <published>2021-03-07T02:49:09.000Z</published>
+    <updated>2021-03-07T14:24:29.435Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、算数运算符&quot;&gt;&lt;a href=&quot;#一、算数运算符&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="后端" scheme="https://wolfwotz-1024.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="Java" scheme="https://wolfwotz-1024.github.io/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>4.数据类型转换</title>
+    <link href="https://wolfwotz-1024.github.io/2021/03/06/4-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>https://wolfwotz-1024.github.io/2021/03/06/4-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
+    <published>2021-03-06T11:45:30.000Z</published>
+    <updated>2021-03-07T02:47:47.268Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Java程序中要求参与的计算的数据，必须要保证数据的一致性，如果数据类型不一致将会发生类型的转换&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;pre class=&quot; language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="后端" scheme="https://wolfwotz-1024.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="Java" scheme="https://wolfwotz-1024.github.io/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>3.常量、变量和数据类型</title>
