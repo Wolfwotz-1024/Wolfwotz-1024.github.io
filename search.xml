@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>7.查漏补缺——byte/short/char</title>
+      <link href="2021/03/08/7-%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA%E2%80%94%E2%80%94byte-short-char/"/>
+      <url>2021/03/08/7-%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA%E2%80%94%E2%80%94byte-short-char/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、byte-short-char隐式强制类型转换"><a href="#一、byte-short-char隐式强制类型转换" class="headerlink" title="一、byte/short/char隐式强制类型转换"></a>一、byte/short/char隐式强制类型转换</h1><ul><li>对于byte/short/char三种类型来说，如果右侧赋值的数值没有超过范围，那么javac编译器将会自动隐含地为我们补上一个(byte)(short)(char)</li><li>如果没有超过左侧变量范围，编译器补上强制类型转换</li><li>如果右侧的数值超过左侧变量范围，那么编译器直接报错</li></ul><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo01Notice</span><span class="token punctuation">{</span>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token comment" spellcheck="true">// 右侧确实是一个int类型的数值，但是没有超过左侧的范围，就是正确的写法</span>        <span class="token comment" spellcheck="true">// int --> byte, 不是自动类型转换</span>        <span class="token keyword">byte</span> num1 <span class="token operator">=</span> <span class="token comment" spellcheck="true">/*(byte)*/</span> <span class="token number">30</span><span class="token punctuation">;</span>        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num1<span class="token punctuation">)</span><span class="token punctuation">;</span>                <span class="token comment" spellcheck="true">// byte num2 = 128; // 右侧超过了左侧的范围</span>                <span class="token comment" spellcheck="true">// int --> char, 没有超过范围</span>        <span class="token comment" spellcheck="true">// 编译器将会自动补上一个隐含的(char)</span>        <span class="token keyword">char</span> zifu <span class="token operator">=</span> <span class="token comment" spellcheck="true">/*(char)*/</span> <span class="token number">65</span><span class="token punctuation">;</span>        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>zifu<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// A</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre><h1 id="二、编译器的常量优化"><a href="#二、编译器的常量优化" class="headerlink" title="二、编译器的常量优化"></a>二、编译器的常量优化</h1><p>在给变量进行赋值的时候，如果右侧的表达式当中全是常量，没有任何变量，那么编译器javac将会直接将若干个常量表达式计算得到结果。</p><pre class=" language-java"><code class="language-java"><span class="token keyword">short</span> result <span class="token operator">=</span> <span class="token number">5</span> <span class="token operator">+</span> <span class="token number">8</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 等号右边全是常量，没有任何变量参与运算</span></code></pre><p>编译之后，得到的<code>.class</code>字节码文件当中相当于【直接就是】:</p><pre class=" language-java"><code class="language-java"><span class="token keyword">short</span> result <span class="token operator">=</span> <span class="token number">13</span><span class="token punctuation">;</span></code></pre><p>右侧的常量结果数值，没有超过左侧范围，所以正确。</p><p>这称为“编译器的常量优化”</p><p><font color = red>但是注意，一旦表达式当中有变量参与，那么就不能进行这种优化了。</font></p><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo02Notice</span><span class="token punctuation">{</span>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token keyword">short</span> num1 <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 正确，没有超过范围</span>                <span class="token keyword">short</span> a <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>        <span class="token keyword">short</span> b <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">// short + short --> int + int -->int</span>        <span class="token comment" spellcheck="true">//short result = a + b; // 错误写法，左侧需要int</span>                <span class="token comment" spellcheck="true">// 右侧不用变量，而且采用常量，而且只有两个常量，没有别人</span>        <span class="token keyword">short</span> result <span class="token operator">=</span> <span class="token number">5</span> <span class="token operator">+</span> <span class="token number">8</span><span class="token punctuation">;</span>        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>                <span class="token comment" spellcheck="true">// short result2 = 5 + a + 8; // 18</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 后端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>6.方法入门</title>
+      <link href="2021/03/08/6-%E6%96%B9%E6%B3%95%E5%85%A5%E9%97%A8/"/>
+      <url>2021/03/08/6-%E6%96%B9%E6%B3%95%E5%85%A5%E9%97%A8/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h1><p>我们在学习运算符的时候，都为每一个运算符单独创建一个新的类和main方法。我们会发现这样编写代码非常的繁琐，而且重复的代码过多，能否避免这样重复的代码呢？——需要使用方法来实现。</p><ul><li>方法：就是将一个功能抽取出来，把代码单独定义在一个大括号内，形成一个单独的功能。</li></ul><p>当我们需要使用这个功能的时候，就可以去调用，这样即实现了代码的复用性，也解决了代码冗余的现象。</p><h1 id="二、方法的定义"><a href="#二、方法的定义" class="headerlink" title="二、方法的定义"></a>二、方法的定义</h1><ul><li>定义格式</li></ul><pre class=" language-java"><code class="language-java">修饰符 返回值类型 方法名 <span class="token punctuation">(</span>参数列表<span class="token punctuation">)</span><span class="token punctuation">{</span>    代码<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>    <span class="token keyword">return</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre><ul><li>定义格式解释<ul><li>修饰符：目前固定写法<code>public static</code></li><li>返回值类型：目前固定写法<code>void</code>，其他返回值类型在后面的课程讲解</li><li>方法名：为我们定义的方法起名，满足标识符的规范，用来调用方法</li></ul></li><li>调用方法<ul><li>方法名称();</li></ul></li><li>注意事项<ul><li>方法定义的先后顺序无所谓</li><li><font color=red>方法的定义不能产生嵌套包含关系</font></li><li>方法定义好了之后，不会执行，如果要像执行，一定要进行方法的【调用】</li></ul></li></ul><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo01Function</span><span class="token punctuation">{</span>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>        <span class="token keyword">int</span> y <span class="token operator">=</span> <span class="token number">99</span><span class="token punctuation">;</span>        <span class="token function">getMax</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span>        <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">getMax</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span>        <span class="token keyword">int</span> max <span class="token operator">=</span> a <span class="token operator">></span> b<span class="token operator">?</span> a<span class="token operator">:</span> b<span class="token punctuation">;</span>        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"最大值为："</span> <span class="token operator">+</span> max<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 后端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>5.运算符</title>
       <link href="2021/03/07/5-%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
       <url>2021/03/07/5-%E8%BF%90%E7%AE%97%E7%AC%A6/</url>

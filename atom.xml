@@ -6,7 +6,7 @@
   <link href="https://wolfwotz-1024.github.io/atom.xml" rel="self"/>
   
   <link href="https://wolfwotz-1024.github.io/"/>
-  <updated>2021-03-07T14:24:29.435Z</updated>
+  <updated>2021-03-08T04:11:17.421Z</updated>
   <id>https://wolfwotz-1024.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>7.查漏补缺——byte/short/char</title>
+    <link href="https://wolfwotz-1024.github.io/2021/03/08/7-%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA%E2%80%94%E2%80%94byte-short-char/"/>
+    <id>https://wolfwotz-1024.github.io/2021/03/08/7-%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA%E2%80%94%E2%80%94byte-short-char/</id>
+    <published>2021-03-08T03:46:43.000Z</published>
+    <updated>2021-03-08T04:11:17.421Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、byte-short-char隐式强制类型转换&quot;&gt;&lt;a href=&quot;#一、byte-short-char隐式强制类型转换&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="后端" scheme="https://wolfwotz-1024.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="Java" scheme="https://wolfwotz-1024.github.io/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>6.方法入门</title>
+    <link href="https://wolfwotz-1024.github.io/2021/03/08/6-%E6%96%B9%E6%B3%95%E5%85%A5%E9%97%A8/"/>
+    <id>https://wolfwotz-1024.github.io/2021/03/08/6-%E6%96%B9%E6%B3%95%E5%85%A5%E9%97%A8/</id>
+    <published>2021-03-08T02:22:04.000Z</published>
+    <updated>2021-03-08T03:01:05.231Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、概述&quot;&gt;&lt;a href=&quot;#一、概述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="后端" scheme="https://wolfwotz-1024.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="Java" scheme="https://wolfwotz-1024.github.io/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>5.运算符</title>
