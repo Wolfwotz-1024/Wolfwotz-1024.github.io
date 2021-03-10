@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="3.常量、变量和数据类型, Hexo">
+    <meta name="keywords" content="11.数组进阶, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>3.常量、变量和数据类型 | Hexo</title>
+    <title>11.数组进阶 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -267,12 +267,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">3.常量、变量和数据类型</h1>
+                    <h1 class="description center-align post-title">11.数组进阶</h1>
                 </div>
             </div>
         </div>
@@ -413,7 +413,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-03-05
+                    2021-03-10
                 </div>
                 
 
@@ -422,14 +422,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    4 Min
+                    6 Min
                 </div>
                 
 
@@ -449,226 +449,200 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、常量"><a href="#一、常量" class="headerlink" title="一、常量"></a>一、常量</h1><h2 id="1、概述"><a href="#1、概述" class="headerlink" title="1、概述"></a>1、概述</h2><p>常量：是指在Java程序运行期间固定不变的数据</p>
-<h2 id="2、分类"><a href="#2、分类" class="headerlink" title="2、分类"></a>2、分类</h2><table>
-<thead>
-<tr>
-<th>类型</th>
-<th>含义</th>
-<th>数据举例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>整数常量</td>
-<td>所有的整数</td>
-<td>0， 1， 567， -9</td>
-</tr>
-<tr>
-<td>小数常量</td>
-<td>所有的小数</td>
-<td>0.0， -0.1， 2.55</td>
-</tr>
-<tr>
-<td>字符常量</td>
-<td><font color=red>单引号引起来，只能写一个字符，必须有内容</font></td>
-<td>‘a’, ‘ ‘, ‘好’</td>
-</tr>
-<tr>
-<td>字符串常量</td>
-<td><font color=red>双引号引起来，可以些多个字符，也可以不写</font></td>
-<td>“A”, “Hello”, “你好”, “”</td>
-</tr>
-<tr>
-<td>布尔常量</td>
-<td>只有两个值</td>
-<td>true, false</td>
-</tr>
-<tr>
-<td>空常量</td>
-<td>只有一个值</td>
-<td>null</td>
-</tr>
-</tbody></table>
-<h2 id="3、实例"><a href="#3、实例" class="headerlink" title="3、实例"></a>3、实例</h2><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo01const</span><span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"ABC"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"XYZ"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        <span class="token comment" spellcheck="true">// 整数常量</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        
-         <span class="token comment" spellcheck="true">// 小数常量</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">3.14</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">2.5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        <span class="token comment" spellcheck="true">// 字符常量</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">'A'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// System.out.println(''); //两个单引号中间必须有且仅有一个字符，没有不行</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        
-        <span class="token comment" spellcheck="true">// 布尔常量</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        
-        <span class="token comment" spellcheck="true">// null</span>
-        <span class="token comment" spellcheck="true">// System.out.println(null);//空常量不能直接打印</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<h1 id="二、变量"><a href="#二、变量" class="headerlink" title="二、变量"></a>二、变量</h1><h2 id="1、变量的定义"><a href="#1、变量的定义" class="headerlink" title="1、变量的定义"></a>1、变量的定义</h2><p>变量定义的格式包括三个要素：<code>数据类型</code>, <code>变量名</code>, <code>数据值</code>。</p>
-<h2 id="2、格式"><a href="#2、格式" class="headerlink" title="2、格式"></a>2、格式</h2><pre class=" language-java"><code class="language-java">数据类型 变量名 <span class="token operator">=</span> 数据值<span class="token punctuation">;</span>
-</code></pre>
-<h2 id="3、实例-1"><a href="#3、实例-1" class="headerlink" title="3、实例"></a>3、实例</h2><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo02Variable</span><span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">// 创建一个变量</span>
-        <span class="token comment" spellcheck="true">// 格式： 数据类型 变量名</span>
-        <span class="token keyword">int</span> num1<span class="token punctuation">;</span>
-        num1 <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        
-        <span class="token comment" spellcheck="true">// 改变变量当中本来的数字</span>
-        num1 <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        
-        <span class="token comment" spellcheck="true">// 使用一步到位的格式来定义变量</span>
-        <span class="token comment" spellcheck="true">// 格式：数据类型 变量名称 = 数据值</span>
-        <span class="token keyword">int</span> num2 <span class="token operator">=</span> <span class="token number">25</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"========"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        
-        <span class="token keyword">byte</span> num3 <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 注意：右侧数值的范围不能超过左侧数据类型的范围</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num3<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        
-        <span class="token comment" spellcheck="true">// byte num4 = 400; // 右侧超出了byte的数据范围，错误</span>
-        
-        <span class="token keyword">long</span> num4 <span class="token operator">=</span> 3000000000L<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//注意整数默认的是int类型，如果需要long类型则需要加上L</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num4<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        
-        <span class="token keyword">float</span> num5 <span class="token operator">=</span> <span class="token number">2.5F</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num5<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<h2 id="4、注意事项"><a href="#4、注意事项" class="headerlink" title="4、注意事项"></a>4、注意事项</h2><ul>
-<li><p>如果创建多个变量，那么变量之间的名称不能重复</p>
-</li>
-<li><p>对于float和long类型来说，字母后缀F和L不能丢掉</p>
-</li>
-<li><p>如果使用byte或者short类型的变量，那么右侧的数据值范围不能超过左侧类型的范围</p>
-</li>
-<li><p>变量要先声明和赋值才能使用</p>
-</li>
-<li><p>变量的使用不能超过作用域的范围</p>
-</li>
-<li><p>可以通过一个语句来创建多个变量，但是一般情况不推荐这么写</p>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 方式一</span>
-<span class="token keyword">int</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">;</span>
-a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-b <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
-c <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">// 方式二</span>
-<span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">,</span> y <span class="token operator">=</span> <span class="token number">200</span><span class="token punctuation">,</span> z <span class="token operator">=</span> <span class="token number">300</span><span class="token punctuation">;</span>
-</code></pre>
-</li>
-</ul>
-<p>这种写法也是可以的，一个程序有重复变量名。</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo03VariableNotice</span><span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">int</span> num1 <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-        <span class="token keyword">long</span> num2 <span class="token operator">=</span> 20L<span class="token punctuation">;</span>
-        <span class="token punctuation">{</span>
-            <span class="token keyword">int</span> num3 <span class="token operator">=</span> <span class="token number">90</span><span class="token punctuation">;</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num3<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">int</span> num3 <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num3<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<h1 id="三、数据类型"><a href="#三、数据类型" class="headerlink" title="三、数据类型"></a>三、数据类型</h1><h2 id="1、数据类型分类："><a href="#1、数据类型分类：" class="headerlink" title="1、数据类型分类："></a>1、数据类型分类：</h2><p>Java的数据类型分为两大类：</p>
+                <h1 id="一、数组原理内存图"><a href="#一、数组原理内存图" class="headerlink" title="一、数组原理内存图"></a>一、数组原理内存图</h1><h2 id="1、内存概述"><a href="#1、内存概述" class="headerlink" title="1、内存概述"></a>1、内存概述</h2><p>内存是计算机中的重要原件，临时存储区域，作用是运行程序，我们编写的程序是存放在硬盘中的，在硬盘中的程序是不会运行的，必须放在内存中才能运行，运行完毕后会清空内存。</p>
+<p>Java虚拟机要运行程序，必须要对内存进行空间的分配和管理。</p>
+<h2 id="2、Java虚拟机的内存划分"><a href="#2、Java虚拟机的内存划分" class="headerlink" title="2、Java虚拟机的内存划分"></a>2、Java虚拟机的内存划分</h2><p>为了提高运算效率，就对空间进行了不同区域的划分，因为每一片区域都有特定的处理数据方式和内存管理方式。</p>
 <ul>
-<li>基本数据类型：包括 <code>整数</code>（byte, short, int, long）, <code>浮点数</code>(float, double), <code>字符</code>(char), <code>布尔</code>(boolean)。</li>
-<li>引用数据类型：包括<code>字符串</code>、 <code>类</code>、<code>数组</code>、<code>接口</code>、Lambda。</li>
+<li>JVM的内存划分</li>
 </ul>
-<h2 id="2、基本数据类型"><a href="#2、基本数据类型" class="headerlink" title="2、基本数据类型"></a>2、基本数据类型</h2><p>四类八种基本数据类型：</p>
 <table>
 <thead>
 <tr>
-<th>数据类型</th>
-<th>关键字</th>
-<th>内存占用</th>
-<th>取值范围</th>
+<th>区域名称</th>
+<th>作用</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>字节型</td>
-<td>byte</td>
-<td>1个字节</td>
-<td>-128~127</td>
+<td>寄存器</td>
+<td>给CPU使用，和开发无关</td>
 </tr>
 <tr>
-<td>短整型</td>
-<td>short</td>
-<td>2个字节</td>
-<td>-32768~32767</td>
+<td>本体方法栈</td>
+<td>JVM在使用操作系统功能的时候使用，和我们开发无关</td>
 </tr>
 <tr>
-<td>整型</td>
-<td>int(默认)</td>
-<td>4个字节</td>
-<td>-2^31 ~ 2^31 -1</td>
+<td>方法区</td>
+<td>存储可以运行的.class 文件</td>
 </tr>
 <tr>
-<td>长整型</td>
-<td>long</td>
-<td>8个字节</td>
-<td>-2^63 ~ 2^63 - 1</td>
+<td>堆内存</td>
+<td><font color=red>存储对象或数组，new来创建的，都存储在堆内存</font></td>
 </tr>
 <tr>
-<td>单精度浮点数</td>
-<td>float</td>
-<td>4个字节</td>
-<td>1.4013E-45 ~ 3.4028E+38</td>
-</tr>
-<tr>
-<td>双精度浮点数</td>
-<td>double(默认)</td>
-<td>8个字节</td>
-<td>4.9E-324 ~ 1.7977E+308</td>
-</tr>
-<tr>
-<td>字符型</td>
-<td>char</td>
-<td>2个字节</td>
-<td>0~65535</td>
-</tr>
-<tr>
-<td>布尔类型</td>
-<td>boolean</td>
-<td>1个字节</td>
-<td>true, false</td>
+<td>方法栈</td>
+<td><font color=red>方法运行时使用的内存</font>，比如main方法运行，进入方法栈中执行</td>
 </tr>
 </tbody></table>
-<blockquote>
-<p>Java中的默认类型：整数类型是<code>int</code>， 浮点类型是<code>double</code>.</p>
-</blockquote>
-<h2 id="3、注意事项"><a href="#3、注意事项" class="headerlink" title="3、注意事项"></a>3、注意事项</h2><ul>
-<li><p>字符串不是基本类型，而是引用类型；</p>
-</li>
-<li><p>浮点型可能只是一个近似值，并非精确的值；</p>
-</li>
-<li><p>数据范围与字节数不一定相关，例如float数据范围比long更加广泛，但是float是4字节，long是8字节</p>
-</li>
-<li><p>浮点数当中默认类型是double，如果一定要使用float类型，需要加上一个后缀F；</p>
-<p>如果是整数，默认为int类型，如果一定要使用long类型，需要加上一个后缀L。推荐使用大写字母后缀。</p>
+<h2 id="3、数组在内存中的存储"><a href="#3、数组在内存中的存储" class="headerlink" title="3、数组在内存中的存储"></a>3、数组在内存中的存储</h2><h3 id="1-、一个数组内存图"><a href="#1-、一个数组内存图" class="headerlink" title="(1)、一个数组内存图"></a>(1)、一个数组内存图</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//[I@7c30a502</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>以上方法执行，输出的结果是<code>[I@7c30a502</code>，这个是什么？是数组在内存中的地址，<code>new</code>出来的内容，都在堆内存中存储，二方法中的<code>arr</code>保存的是数组的地址。</p>
+<p><strong>输出<code>arr[0]</code>，就会输出<code>arr</code>保存的内存地址中数组索引为0的元素。</strong></p>
+<p>程序执行流程：</p>
+<ul>
+<li>1、<code>main</code>方法进入方法栈执行</li>
+<li>2、创建数组，JVM会在堆内存中开辟空间，存储数组</li>
+<li>3、数组在内存中会有自己的内存地址，以十六进制数表示</li>
+<li>4、数组中有3个元素，默认值为0</li>
+<li>5、JVM将数组的内存地址赋值给引用类型变量<code>arr</code></li>
+<li>6、变量<code>arr</code>保存的是数组内存中的地址，而不是一个具体数值，因此称为引用数据类型</li>
+</ul>
+<p><img src="/images/13_Java_Memory_1.jpg" alt="1_Java_Memory"></p>
+<h3 id="2-、两个数组内存图"><a href="#2-、两个数组内存图" class="headerlink" title="(2)、两个数组内存图"></a>(2)、两个数组内存图</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arr1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arr2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><img src="/images/14_Java_Memory_2.jpg" alt="2_Java_Memory"></p>
+<h3 id="3-、两个变量指向一个数组"><a href="#3-、两个变量指向一个数组" class="headerlink" title="(3)、两个变量指向一个数组"></a>(3)、两个变量指向一个数组</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 定义数组。存储3个元素</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 数组索引进行赋值</span>
+    arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+    arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+    arr<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 输出元素值</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 定义数组变量arr2，将arr的地址赋值arr2</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr2 <span class="token operator">=</span> arr<span class="token punctuation">;</span>
+    arr2<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">9</span><span class="token punctuation">;</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><img src="/images/15_Java_Memory_3.jpg" alt="3_Java_Memory"></p>
+<h3 id="4-、举例"><a href="#4-、举例" class="headerlink" title="(4)、举例"></a>(4)、举例</h3><p><img src="/images/16_Java_Memory.jpg" alt="4_Java"></p>
+<h1 id="二、数组的常见操作"><a href="#二、数组的常见操作" class="headerlink" title="二、数组的常见操作"></a>二、数组的常见操作</h1><h2 id="1、数组越界异常"><a href="#1、数组越界异常" class="headerlink" title="1、数组越界异常"></a>1、数组越界异常</h2><p>看下面代码：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>创建数组，赋值3个元素，数组的索引就是0， 1， 2，没有索引3，因此我们不能访问数组中不存在的索引，程序运行后，将会抛出<code>ArrayIndexOutOfBoundsException</code>数组越界异常。在开发中，数组的越界异常是不能出现的，一旦出现，就需要修改代码。</p>
+<h2 id="2、数组空指针异常"><a href="#2、数组空指针异常" class="headerlink" title="2、数组空指针异常"></a>2、数组空指针异常</h2><p>观察以下代码，运行后会出现什么结果。</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    arr <span class="token operator">=</span> null<span class="token punctuation">;</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><code>arr = null</code>这行代码，意味着变量<code>arr</code>将不会保存数组的内存地址，也就不允许再操作数组了，因此运行的时候会抛出<code>NullPointerException</code>空指针异常。在开发中，数组的越界异常是不能出现的，一旦出现，就必须修改代码。</p>
+<p>空指针在内存图中的表现</p>
+<p><img src="/images/17_Java_NullPointer.jpg" alt="5_Java_NullPointer"></p>
+<h2 id="3、数组遍历【重点】"><a href="#3、数组遍历【重点】" class="headerlink" title="3、数组遍历【重点】"></a>3、数组遍历【重点】</h2><ul>
+<li>数组遍历：就是将数组中的每个元素都分别获取出来，就是遍历。遍历也是数组操作中的基石。</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    arr<span class="token punctuation">.</span>length<span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="4、数组获取最大值元素"><a href="#4、数组获取最大值元素" class="headerlink" title="4、数组获取最大值元素"></a>4、数组获取最大值元素</h2><ul>
+<li>最大值获取：从数组的所有元素中找出最大值</li>
+<li>实现思路：<ul>
+<li>定义变量，保存数组索引0的元素A</li>
+<li>遍历数组，获取出数组中的每个元素</li>
+<li>将遍历到的元素和保存数组A进行比较</li>
+<li>如果数组元素A的值大于遍历的元素值，就将A记为最大值，否则将遍历的值记为最大值</li>
+<li>数组循环遍历结束，得到最大值</li>
+</ul>
 </li>
 </ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">int</span> max <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">></span> max<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                max <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>max<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+<h2 id="5、数组反转"><a href="#5、数组反转" class="headerlink" title="5、数组反转"></a>5、数组反转</h2><ul>
+<li>数组反转：数组中的元素颠倒顺序</li>
+<li>实现思路：数组最远端的元素互换位置（要求原地反转）</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">arrayReverseReplace</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> j <span class="token operator">=</span> arr<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> temp<span class="token punctuation">;</span>
+
+    <span class="token keyword">while</span><span class="token punctuation">(</span>i <span class="token operator">&lt;</span> j<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        temp <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+        i<span class="token operator">++</span><span class="token punctuation">;</span>
+        j<span class="token operator">--</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="三、数组作为方法参数和返回值"><a href="#三、数组作为方法参数和返回值" class="headerlink" title="三、数组作为方法参数和返回值"></a>三、数组作为方法参数和返回值</h1><h2 id="1、数组作为方法参数"><a href="#1、数组作为方法参数" class="headerlink" title="1、数组作为方法参数"></a>1、数组作为方法参数</h2><p>以前的方法中学习了方法的参数和返回值，但是使用的都是基本数据类型，那么作为引用类型的数组能够作为方法的参数进行传递呢？当然可以！</p>
+<ul>
+<li><font color = red>数组作为方法参数传递，传递的参数都是数组内存的地址</font></li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//调用方法，传递数组</span>
+    <span class="token function">printArray</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">printArray</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="2、数组作为方法返回值"><a href="#2、数组作为方法返回值" class="headerlink" title="2、数组作为方法返回值"></a>2、数组作为方法返回值</h2><ul>
+<li><font color = red>数组作为方法的返回值，返回的是数组的内存地址</font></li>
+<li><font color = red>一个方法可以有0、1、或多个参数，但是只能有0或1个返回值，不能有多个返回值, 如果希望一个方法当中产生多个结果的返回值，可以使用一个数组作为返回值类型即可</font></li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//调用方法，接收数组的返回值</span>
+    <span class="token comment" spellcheck="true">//接受到的是数组的内存地址</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> <span class="token function">getArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">,</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">getArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> arr<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> result <span class="token operator">=</span> <span class="token function">calculate</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"总和为："</span> <span class="token operator">+</span> result<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"平均数："</span> <span class="token operator">+</span> result<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">calculate</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> sum <span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> avg <span class="token operator">=</span> sum <span class="token operator">/</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> res <span class="token operator">=</span> <span class="token punctuation">{</span>sum<span class="token punctuation">,</span> avg<span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p><font color =red> 总结：方法的参数为基本类型时，传递的是数据值，方法的参数为引用类型时，传递的是地址值.</font></p>
+</blockquote>
 
                 
             </div>
@@ -695,7 +669,7 @@ c <span class="token operator">=</span> <span class="token number">30</span><spa
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wolfwotz-1024.github.io/2021/03/05/3-%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">https://wolfwotz-1024.github.io/2021/03/05/3-%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</a>
+                    <a href="https://wolfwotz-1024.github.io/2021/03/10/11-%E6%95%B0%E7%BB%84%E8%BF%9B%E9%98%B6/">https://wolfwotz-1024.github.io/2021/03/10/11-%E6%95%B0%E7%BB%84%E8%BF%9B%E9%98%B6/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -906,17 +880,18 @@ c <span class="token operator">=</span> <span class="token number">30</span><spa
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2021/03/06/4-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+                <a href="/2021/03/10/11-%E6%95%B0%E7%BB%84%E8%BF%9B%E9%98%B6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="4.数据类型转换">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="11.数组进阶">
                         
-                        <span class="card-title">4.数据类型转换</span>
+                        <span class="card-title">11.数组进阶</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -926,9 +901,9 @@ c <span class="token operator">=</span> <span class="token number">30</span><spa
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -941,6 +916,7 @@ c <span class="token operator">=</span> <span class="token number">30</span><spa
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -959,13 +935,13 @@ c <span class="token operator">=</span> <span class="token number">30</span><spa
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/04/2-HelloWorld%E5%85%A5%E9%97%A8%E7%A8%8B%E5%BA%8F/">
+                <a href="/2021/03/10/10-%E6%95%B0%E7%BB%84/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="2.HelloWorld入门程序">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="10.数组入门">
                         
-                        <span class="card-title">2.HelloWorld入门程序</span>
+                        <span class="card-title">10.数组入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -976,7 +952,7 @@ c <span class="token operator">=</span> <span class="token number">30</span><spa
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-10
                             </span>
                         <span class="publish-author">
                             
