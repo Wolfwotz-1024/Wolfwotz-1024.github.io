@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="6.方法入门, Hexo">
+    <meta name="keywords" content="13.面向对象特性——封装性, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>6.方法入门 | Hexo</title>
+    <title>13.面向对象特性——封装性 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -267,12 +267,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">6.方法入门</h1>
+                    <h1 class="description center-align post-title">13.面向对象特性——封装性</h1>
                 </div>
             </div>
         </div>
@@ -413,7 +413,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-03-08
+                    2021-03-11
                 </div>
                 
 
@@ -422,14 +422,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    366
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    3 Min
                 </div>
                 
 
@@ -449,50 +449,116 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h1><p>我们在学习运算符的时候，都为每一个运算符单独创建一个新的类和main方法。我们会发现这样编写代码非常的繁琐，而且重复的代码过多，能否避免这样重复的代码呢？——需要使用方法来实现。</p>
-<ul>
-<li>方法：就是将一个功能抽取出来，把代码单独定义在一个大括号内，形成一个单独的功能。</li>
+                <h1 id="一、封装概述"><a href="#一、封装概述" class="headerlink" title="一、封装概述"></a>一、封装概述</h1><h2 id="1、概述"><a href="#1、概述" class="headerlink" title="1、概述"></a>1、概述</h2><p>面向对象编程语言是对客观事件的模拟，客观事件里成员变量都是隐藏在对象内部的，外界无法直接操作和修改。封装可以被认为是一个保护屏障，防止该类代码和数据被其他类随意访问。要访问该类数据必须通过指定的方式。适当的封装可以让代码更容易理解和维护，也加强了代码的安全性。</p>
+<h2 id="2、原则"><a href="#2、原则" class="headerlink" title="2、原则"></a>2、原则</h2><p>将<code>属性隐藏</code>起来，若要访问某个属性，<code>提供公共方法</code>对其访问。</p>
+<h1 id="二、封装的步骤"><a href="#二、封装的步骤" class="headerlink" title="二、封装的步骤"></a>二、封装的步骤</h1><ul>
+<li>使用<code>private</code>关键字来修饰成员变量</li>
+<li>对需要访问的成员变量，提供对应的一对<code>getXxx</code>方法、<code>setXxx</code>方法</li>
 </ul>
-<p>当我们需要使用这个功能的时候，就可以去调用，这样即实现了代码的复用性，也解决了代码冗余的现象。</p>
-<h1 id="二、方法的定义"><a href="#二、方法的定义" class="headerlink" title="二、方法的定义"></a>二、方法的定义</h1><ul>
-<li>定义格式</li>
+<h1 id="三、封装的操作——private关键字"><a href="#三、封装的操作——private关键字" class="headerlink" title="三、封装的操作——private关键字"></a>三、封装的操作——private关键字</h1><h2 id="1、private的含义"><a href="#1、private的含义" class="headerlink" title="1、private的含义"></a>1、private的含义</h2><ul>
+<li><code>private</code>是一个权限修饰符，代表最小权限</li>
+<li>可以修饰成员变量和成员方法</li>
+<li><font color = red>被<code>private</code>修饰后的成员变量和成员方法，只在本类中才能被方法</font></li>
 </ul>
-<pre class=" language-java"><code class="language-java">修饰符 返回值类型 方法名 <span class="token punctuation">(</span>参数列表<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    代码<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-    <span class="token keyword">return</span><span class="token punctuation">;</span>
+<h2 id="2、private的使用格式"><a href="#2、private的使用格式" class="headerlink" title="2、private的使用格式"></a>2、private的使用格式</h2><pre class=" language-java"><code class="language-java"><span class="token keyword">private</span> 数据类型 变量名<span class="token punctuation">;</span>
+</code></pre>
+<h3 id="1-、使用private修饰成员变量，代码如下："><a href="#1-、使用private修饰成员变量，代码如下：" class="headerlink" title="(1)、使用private修饰成员变量，代码如下："></a>(1)、使用<code>private</code>修饰成员变量，代码如下：</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Student</span><span class="token punctuation">{</span>
+    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<ul>
-<li>定义格式解释<ul>
-<li>修饰符：目前固定写法<code>public static</code></li>
-<li>返回值类型：目前固定写法<code>void</code>，其他返回值类型在后面的课程讲解</li>
-<li>方法名：为我们定义的方法起名，满足标识符的规范，用来调用方法</li>
-</ul>
-</li>
-<li>调用方法<ul>
-<li>方法名称();</li>
-</ul>
-</li>
-<li>注意事项<ul>
-<li>方法定义的先后顺序无所谓</li>
-<li><font color=red>方法的定义不能产生嵌套包含关系</font></li>
-<li>方法定义好了之后，不会执行，如果要像执行，一定要进行方法的【调用】</li>
-</ul>
-</li>
-</ul>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo01Function</span><span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> y <span class="token operator">=</span> <span class="token number">99</span><span class="token punctuation">;</span>
-        <span class="token function">getMax</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h3 id="2-、提供getXxx方法、setXxx方法，可以访问成员变量，代码如下："><a href="#2-、提供getXxx方法、setXxx方法，可以访问成员变量，代码如下：" class="headerlink" title="(2)、提供getXxx方法、setXxx方法，可以访问成员变量，代码如下："></a>(2)、提供<code>getXxx</code>方法、<code>setXxx</code>方法，可以访问成员变量，代码如下：</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Student</span><span class="token punctuation">{</span>
+    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">boolean</span> male<span class="token punctuation">;</span>
+    
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setMale</span><span class="token punctuation">(</span><span class="token keyword">boolean</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        male <span class="token operator">=</span> b<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
     
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">getMax</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">int</span> max <span class="token operator">=</span> a <span class="token operator">></span> b<span class="token operator">?</span> a<span class="token operator">:</span> b<span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"最大值为："</span> <span class="token operator">+</span> max<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">isMale</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> male<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span>String n<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        name <span class="token operator">=</span> n<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">public</span> String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setAge</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        age <span class="token operator">=</span> a<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> age<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
+<blockquote>
+<p><font color = red>注意对基本类型的boolean，其中Getter方法要写成<code>isXxx</code>，Setter方法保持<code>setXxx</code>不变</font></p>
+</blockquote>
+<h1 id="四、封装优化1——this关键字"><a href="#四、封装优化1——this关键字" class="headerlink" title="四、封装优化1——this关键字"></a>四、封装优化1——this关键字</h1><p>如果在类的某些方法中，传进来的参数名称和成员变量名一致，那么输出的结果是否是我们想要的呢？代码如下：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Student</span><span class="token punctuation">{</span>
+    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span>string name<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setAge</span><span class="token punctuation">(</span><span class="token keyword">int</span> age<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>经过修改和测试，发现问题：成员变量赋值失效了，也就是说，在修改了<code>setXxx()</code>的形参变量名后，方法并没有给成员变量赋值，这是由于形参变量名和成员变量名重名，导致成员变量名被隐藏，方法中的变量名，无法访问到成员变量，从而赋值失败。所以，我们只能使用<code>this</code>关键字，来解决这个重名的问题。</p>
+<h2 id="1、this含义"><a href="#1、this含义" class="headerlink" title="1、this含义"></a>1、this含义</h2><p>this 代表所在类的当前对象的引用（地址值），即对象自己的引用。</p>
+<blockquote>
+<p>记住：方法被哪个对象调用，方法中的this就代表哪个对象。</p>
+</blockquote>
+<h2 id="2、this使用格式"><a href="#2、this使用格式" class="headerlink" title="2、this使用格式"></a>2、this使用格式</h2><pre class=" language-java"><code class="language-java"><span class="token keyword">this</span><span class="token punctuation">.</span>成员变量名<span class="token punctuation">;</span>
+</code></pre>
+<p>使用<code>this</code>修饰方法中的变量，解决成员变量被隐藏的问题，代码如下：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Student</span><span class="token punctuation">{</span>
+    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span>string name<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setAge</span><span class="token punctuation">(</span><span class="token keyword">int</span> age<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="五、封装优化2——构造方法"><a href="#五、封装优化2——构造方法" class="headerlink" title="五、封装优化2——构造方法"></a>五、封装优化2——构造方法</h1><p>当一个对象被创建的时候，构造方法用来初始化该对象，给对象的成员变量赋初始值。</p>
+<blockquote>
+<p>小贴士：无论你是否自定义构造方法，所有的类都有构造方法，因为Java自动提供了一个无参数的构造方法，一旦自己定义了构造方法，Java自动提供的默认无参数构造方法就会失效。</p>
+</blockquote>
+<h2 id="1、构造方法的定义格式"><a href="#1、构造方法的定义格式" class="headerlink" title="1、构造方法的定义格式"></a>1、构造方法的定义格式</h2><pre class=" language-java"><code class="language-java">修饰符 构造方法名<span class="token punctuation">(</span>参数列表<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 方法体</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>构造方法的写法上，方法名和类名相同。它没有返回值，所以不需要返回值类型，甚至不需要void。使用构造方法后，代码如下：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Student</span><span class="token punctuation">{</span>
+    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 无参数构造方法</span>
+    <span class="token keyword">public</span> <span class="token function">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">// 有参数构造方法</span>
+    <span class="token keyword">public</span> <span class="token function">Student</span><span class="token punctuation">(</span>String name<span class="token punctuation">,</span> <span class="token keyword">int</span> age<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="2、注意事项"><a href="#2、注意事项" class="headerlink" title="2、注意事项"></a>2、<font color = red>注意事项</font></h2><ul>
+<li>如果你不提供构造方法，系统会给出无参数构造方法</li>
+<li>如果你提供了构造方法，系统将不再提供无参数构造方法</li>
+<li>构造方法是可以重载的，既可以定义参数，也可以不定义参数</li>
+</ul>
 
                 
             </div>
@@ -519,7 +585,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wolfwotz-1024.github.io/2021/03/08/6-%E6%96%B9%E6%B3%95%E5%85%A5%E9%97%A8/">https://wolfwotz-1024.github.io/2021/03/08/6-%E6%96%B9%E6%B3%95%E5%85%A5%E9%97%A8/</a>
+                    <a href="https://wolfwotz-1024.github.io/2021/03/11/13-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%89%B9%E6%80%A7%E2%80%94%E2%80%94%E5%B0%81%E8%A3%85%E6%80%A7/">https://wolfwotz-1024.github.io/2021/03/11/13-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%89%B9%E6%80%A7%E2%80%94%E2%80%94%E5%B0%81%E8%A3%85%E6%80%A7/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -730,17 +796,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2021/03/08/7-%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA%E2%80%94%E2%80%94byte-short-char/">
+                <a href="/2021/03/11/13-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%89%B9%E6%80%A7%E2%80%94%E2%80%94%E5%B0%81%E8%A3%85%E6%80%A7/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="7.查漏补缺——byte/short/char">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="13.面向对象特性——封装性">
                         
-                        <span class="card-title">7.查漏补缺——byte/short/char</span>
+                        <span class="card-title">13.面向对象特性——封装性</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -750,9 +817,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -765,6 +832,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -783,13 +851,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/07/5-%E8%BF%90%E7%AE%97%E7%AC%A6/">
+                <a href="/2021/03/10/12-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%9D%E6%83%B3/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="5.运算符">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="12.面向对象思想">
                         
-                        <span class="card-title">5.运算符</span>
+                        <span class="card-title">12.面向对象思想</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -800,7 +868,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-10
                             </span>
                         <span class="publish-author">
                             
