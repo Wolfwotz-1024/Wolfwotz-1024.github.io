@@ -6,7 +6,7 @@
   <link href="https://wolfwotz-1024.github.io/atom.xml" rel="self"/>
   
   <link href="https://wolfwotz-1024.github.io/"/>
-  <updated>2021-03-11T14:43:05.735Z</updated>
+  <updated>2021-03-12T04:38:13.353Z</updated>
   <id>https://wolfwotz-1024.github.io/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>16.Java_API ArrayList</title>
+    <link href="https://wolfwotz-1024.github.io/2021/03/12/16-Java-API-ArrayList/"/>
+    <id>https://wolfwotz-1024.github.io/2021/03/12/16-Java-API-ArrayList/</id>
+    <published>2021-03-12T03:17:50.000Z</published>
+    <updated>2021-03-12T04:38:13.353Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一、引入——对象数组&quot;&gt;&lt;a href=&quot;#一、引入——对象数组&quot; class=&quot;headerlink&quot; title=&quot;一、引入——对象数组&quot;&gt;&lt;/a&gt;一、引入——对象数组&lt;/h2&gt;&lt;p&gt;使用学生数组，存储三个学生对象，代码如下：&lt;/p&gt;
+&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="后端" scheme="https://wolfwotz-1024.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="Java" scheme="https://wolfwotz-1024.github.io/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>15.Java_API Random</title>
+    <link href="https://wolfwotz-1024.github.io/2021/03/12/15-Java-API-Random/"/>
+    <id>https://wolfwotz-1024.github.io/2021/03/12/15-Java-API-Random/</id>
+    <published>2021-03-12T02:29:45.000Z</published>
+    <updated>2021-03-12T03:17:21.950Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、什么是Random类&quot;&gt;&lt;a href=&quot;#一、什么是Random类&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="后端" scheme="https://wolfwotz-1024.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="Java" scheme="https://wolfwotz-1024.github.io/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>14.Java_API Scanner</title>
