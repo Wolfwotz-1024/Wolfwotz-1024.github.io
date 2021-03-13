@@ -6,7 +6,7 @@
   <link href="https://wolfwotz-1024.github.io/atom.xml" rel="self"/>
   
   <link href="https://wolfwotz-1024.github.io/"/>
-  <updated>2021-03-13T04:04:52.949Z</updated>
+  <updated>2021-03-13T15:12:11.588Z</updated>
   <id>https://wolfwotz-1024.github.io/</id>
   
   <author>
@@ -15,6 +15,106 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>24.Java_KeyWord 进阶 super this</title>
+    <link href="https://wolfwotz-1024.github.io/2021/03/13/24-Java-KeyWord-%E8%BF%9B%E9%98%B6-super-this/"/>
+    <id>https://wolfwotz-1024.github.io/2021/03/13/24-Java-KeyWord-%E8%BF%9B%E9%98%B6-super-this/</id>
+    <published>2021-03-13T14:47:10.000Z</published>
+    <updated>2021-03-13T15:12:11.588Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot; language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="后端" scheme="https://wolfwotz-1024.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="Java" scheme="https://wolfwotz-1024.github.io/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>23.Java-KeyWord this</title>
+    <link href="https://wolfwotz-1024.github.io/2021/03/13/23-Java-KeyWord-this/"/>
+    <id>https://wolfwotz-1024.github.io/2021/03/13/23-Java-KeyWord-this/</id>
+    <published>2021-03-13T14:25:12.000Z</published>
+    <updated>2021-03-13T14:44:50.303Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;this关键字的用法有三种&quot;&gt;&lt;a href=&quot;#this关键字的用法有三种&quot; class=&quot;headerlink&quot; title=&quot;this关键字的用法有三种&quot;&gt;&lt;/a&gt;this关键字的用法有三种&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="后端" scheme="https://wolfwotz-1024.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="Java" scheme="https://wolfwotz-1024.github.io/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>22.Java-KeyWord super</title>
+    <link href="https://wolfwotz-1024.github.io/2021/03/13/22-Java-KeyWord-super/"/>
+    <id>https://wolfwotz-1024.github.io/2021/03/13/22-Java-KeyWord-super/</id>
+    <published>2021-03-13T14:11:50.000Z</published>
+    <updated>2021-03-13T14:24:33.390Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;super关键字的用法有三种&quot;&gt;&lt;a href=&quot;#super关键字的用法有三种&quot; class=&quot;headerlink&quot; title=&quot;super关键字的用法有三种&quot;&gt;&lt;/a&gt;super关键字的用法有三种&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="后端" scheme="https://wolfwotz-1024.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="Java" scheme="https://wolfwotz-1024.github.io/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>21.面向对象特征——继承</title>
+    <link href="https://wolfwotz-1024.github.io/2021/03/13/21-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%89%B9%E5%BE%81%E2%80%94%E2%80%94%E7%BB%A7%E6%89%BF/"/>
+    <id>https://wolfwotz-1024.github.io/2021/03/13/21-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%89%B9%E5%BE%81%E2%80%94%E2%80%94%E7%BB%A7%E6%89%BF/</id>
+    <published>2021-03-13T07:57:24.000Z</published>
+    <updated>2021-03-13T14:10:35.551Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、概述&quot;&gt;&lt;a href=&quot;#一、概述&quot; class=&quot;headerlink&quot; title=&quot;一、概述&quot;&gt;&lt;/a&gt;一、概述&lt;/h1&gt;&lt;h2 id=&quot;1、定义&quot;&gt;&lt;a href=&quot;#1、定义&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="后端" scheme="https://wolfwotz-1024.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="Java" scheme="https://wolfwotz-1024.github.io/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>20.Java-API Math</title>
@@ -408,109 +508,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;一、算数运算符&quot;&gt;&lt;a href=&quot;#一、算数运算符&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="后端" scheme="https://wolfwotz-1024.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-    <category term="Java" scheme="https://wolfwotz-1024.github.io/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>4.数据类型转换</title>
-    <link href="https://wolfwotz-1024.github.io/2021/03/06/4-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    <id>https://wolfwotz-1024.github.io/2021/03/06/4-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
-    <published>2021-03-06T11:45:30.000Z</published>
-    <updated>2021-03-07T02:47:47.268Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Java程序中要求参与的计算的数据，必须要保证数据的一致性，如果数据类型不一致将会发生类型的转换&lt;/p&gt;
-&lt;p&gt;例如：&lt;/p&gt;
-&lt;pre class=&quot; language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    <category term="后端" scheme="https://wolfwotz-1024.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-    <category term="Java" scheme="https://wolfwotz-1024.github.io/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>3.常量、变量和数据类型</title>
-    <link href="https://wolfwotz-1024.github.io/2021/03/05/3-%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    <id>https://wolfwotz-1024.github.io/2021/03/05/3-%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</id>
-    <published>2021-03-05T12:32:02.000Z</published>
-    <updated>2021-03-05T15:05:25.792Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;一、常量&quot;&gt;&lt;a href=&quot;#一、常量&quot; class=&quot;headerlink&quot; title=&quot;一、常量&quot;&gt;&lt;/a&gt;一、常量&lt;/h1&gt;&lt;h2 id=&quot;1、概述&quot;&gt;&lt;a href=&quot;#1、概述&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="后端" scheme="https://wolfwotz-1024.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-    <category term="Java" scheme="https://wolfwotz-1024.github.io/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2.HelloWorld入门程序</title>
-    <link href="https://wolfwotz-1024.github.io/2021/03/04/2-HelloWorld%E5%85%A5%E9%97%A8%E7%A8%8B%E5%BA%8F/"/>
-    <id>https://wolfwotz-1024.github.io/2021/03/04/2-HelloWorld%E5%85%A5%E9%97%A8%E7%A8%8B%E5%BA%8F/</id>
-    <published>2021-03-04T08:28:20.000Z</published>
-    <updated>2021-03-04T16:13:15.280Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;一、程序开发步骤说明&quot;&gt;&lt;a href=&quot;#一、程序开发步骤说明&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="后端" scheme="https://wolfwotz-1024.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-    <category term="Java" scheme="https://wolfwotz-1024.github.io/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>1.Java语言开发环境</title>
-    <link href="https://wolfwotz-1024.github.io/2021/03/04/1-Java%E8%AF%AD%E8%A8%80%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
-    <id>https://wolfwotz-1024.github.io/2021/03/04/1-Java%E8%AF%AD%E8%A8%80%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</id>
-    <published>2021-03-04T07:16:42.000Z</published>
-    <updated>2021-03-04T08:19:51.252Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;一、Java-虚拟机——JVM&quot;&gt;&lt;a href=&quot;#一、Java-虚拟机——JVM&quot; class=&quot;headerlink&quot; title=&quot;一、Java 虚拟机——JVM&quot;&gt;&lt;/a&gt;一、Java 虚拟机——JVM&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;JVM（Java</summary>
         
       
     

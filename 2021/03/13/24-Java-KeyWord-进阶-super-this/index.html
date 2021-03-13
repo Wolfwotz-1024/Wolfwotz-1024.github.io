@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="4.数据类型转换, Hexo">
+    <meta name="keywords" content="24.Java_KeyWord 进阶 super this, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>4.数据类型转换 | Hexo</title>
+    <title>24.Java_KeyWord 进阶 super this | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -267,12 +267,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">4.数据类型转换</h1>
+                    <h1 class="description center-align post-title">24.Java_KeyWord 进阶 super this</h1>
                 </div>
             </div>
         </div>
@@ -413,7 +413,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-03-06
+                    2021-03-13
                 </div>
                 
 
@@ -422,14 +422,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1.2k
+                    80
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    4 Min
+                    1 Min
                 </div>
                 
 
@@ -449,131 +449,42 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Java程序中要求参与的计算的数据，必须要保证数据的一致性，如果数据类型不一致将会发生类型的转换</p>
-<p>例如：</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo01DataType</span><span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">1024</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 这是个整数， 默认为int类型</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token number">3.14</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 这是个浮点数，默认为double类型</span>
-        
-        <span class="token comment" spellcheck="true">// 左边是long 类型，右边是默认的int 类型，左右不一样</span>
-        <span class="token keyword">long</span> num1 <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>    
-<span class="token punctuation">}</span>
-</code></pre>
-<h1 id="一、自动类型转换"><a href="#一、自动类型转换" class="headerlink" title="一、自动类型转换"></a>一、自动类型转换</h1><p>一个<code>int</code>类型变量和一个<code>byte</code>类型的变量进行加法运算，结果会是什么数据类型？</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-<span class="token keyword">byte</span> b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
-</code></pre>
-<p>运算结果，变量的类型将是<code>int</code>类型，这就是出现了数据类型的自动类型转换现象。</p>
-<h2 id="1、定义"><a href="#1、定义" class="headerlink" title="1、定义"></a>1、定义</h2><ul>
-<li><strong>自动转换</strong>：将<code>取值范围小的类型</code>转换为<code>取值范围大的类型</code>。</li>
-</ul>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">byte</span> b <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">// byte x = b + i; // 报错</span>
-    <span class="token comment" spellcheck="true">// int 类型和 byte 类型运算，结果是int 类型</span>
-    <span class="token keyword">int</span> j <span class="token operator">=</span> i <span class="token operator">+</span> b<span class="token punctuation">;</span>
-    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<h2 id="2、特点"><a href="#2、特点" class="headerlink" title="2、特点"></a>2、特点</h2><ul>
-<li><p>代码不需要进行特殊处理，自动完成。</p>
-</li>
-<li><p><font color = red>数据范围从小到大, 数据范围与其对应的字节数不成正相关，即字节数越大数据范围不一定越大</font></p>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 左边是long类型，右边是默认的int 类型</span>
-<span class="token comment" spellcheck="true">// 改行代码表示将int --> long, 符合了数据范围从小到大的要求</span>
-<span class="token comment" spellcheck="true">// 这一行代码发生了自动类型转换</span>
-<span class="token keyword">long</span> num1 <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+                <pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SuperClass</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
 
-<span class="token comment" spellcheck="true">// 左边是double类型，右边是float类型，左右不一样</span>
-<span class="token comment" spellcheck="true">// float --> double ,符合从小到大的规则</span>
-<span class="token keyword">double</span> num2 <span class="token operator">=</span> <span class="token number">2.5F</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"父类方法"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 
-<span class="token comment" spellcheck="true">// 左边是float类型，右边是long类型</span>
-<span class="token comment" spellcheck="true">// long --> float,范围float类型更大，符合从小到大的规则</span>
-<span class="token comment" spellcheck="true">// 发生自动类型转换</span>
-<span class="token keyword">float</span> num3 <span class="token operator">=</span> 30L<span class="token punctuation">;</span>
-</code></pre>
-</li>
-</ul>
-<h1 id="二、强制类型转换"><a href="#二、强制类型转换" class="headerlink" title="二、强制类型转换"></a>二、强制类型转换</h1><p>将<code>1.5</code>赋值给<code>int</code>类型变量会发生什么？<font color = red>产生编译失败，无法赋值</font></p>
-<p><code>double</code>类型内存8个字节，<code>int</code>类型内存4个字节。<code>1.5</code>是<code>double</code>类型，取值范围大于<code>int</code>。可以理解为<code>double</code>是8升水，<code>int</code>是4升水，不能把大水壶中的水直接放到小水壶中去。</p>
-<p>想要赋值成功，只有通过强制类型转换，将<code>double</code>类型强制转换为<code>int</code>类型才能赋值。</p>
-<h2 id="1、定义-1"><a href="#1、定义-1" class="headerlink" title="1、定义"></a>1、定义</h2><p>将<code>取值范围大的类型</code>强制转换成<code>取值范围小的类型</code>.</p>
-<p>比较而言，自动转换是Java自动执行的，而强制转换需要我们手动执行。    </p>
-<ul>
-<li><p>格式：</p>
-<pre class=" language-java"><code class="language-java">数据类型 变量名 <span class="token operator">=</span> <span class="token punctuation">(</span>数据类型<span class="token punctuation">)</span> 被转数据值
-</code></pre>
-</li>
-</ul>
-<h2 id="2、特点-1"><a href="#2、特点-1" class="headerlink" title="2、特点"></a>2、特点</h2><ul>
-<li>代码需要进行特殊的格式处理，不能自动完成</li>
-<li>格式：范围小的类型 范围小的变量名 = (范围小的类型) 原本范围大的数据 </li>
-</ul>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo02DataType</span><span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">// 左边是 int 类型, 右边默认是int 类型,不会发生类型转换</span>
-        <span class="token keyword">int</span> num1 <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        
-        <span class="token comment" spellcheck="true">// 左边是 int 类型, 右边是 long类型</span>
-        <span class="token comment" spellcheck="true">// long --> int, 数据范围不是从小到大</span>
-        <span class="token comment" spellcheck="true">// 不能发生自动类型转换</span>
-        <span class="token comment" spellcheck="true">//int num2 = 100L;</span>
-        <span class="token comment" spellcheck="true">//System.out.println(num2);</span>
-        
-        <span class="token comment" spellcheck="true">// 进行强制类型转换</span>
-        <span class="token keyword">int</span> num3 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> 100L<span class="token punctuation">;</span>
-        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num3<span class="token punctuation">)</span><span class="token punctuation">;</span>    
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SubClass</span> <span class="token keyword">extends</span> <span class="token class-name">SuperClass</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"子类方法"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 30</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 20</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">super</span><span class="token punctuation">.</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 10</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo01Extends</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        SubClass sub <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SubClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        sub<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        sub<span class="token punctuation">.</span><span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h2 id="3、注意事项"><a href="#3、注意事项" class="headerlink" title="3、注意事项"></a><font color = red>3、注意事项</font></h2><h4 id="（1）、强制类型转换一般不推荐使用，因为有可能发生精度损失、数据溢出"><a href="#（1）、强制类型转换一般不推荐使用，因为有可能发生精度损失、数据溢出" class="headerlink" title="（1）、强制类型转换一般不推荐使用，因为有可能发生精度损失、数据溢出"></a>（1）、强制类型转换一般不推荐使用，因为有可能发生精度损失、数据溢出</h4><ul>
-<li>数据溢出</li>
-</ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 情况一</span>
-<span class="token comment" spellcheck="true">// 右边虽然是long类型，但是经过强制类型转换后变成int类型，但是100这个数值并没有超过int类型的范围</span>
-<span class="token keyword">int</span> num1 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> 100L<span class="token punctuation">;</span>
+<p>内存图</p>
+<p><img src="/images/26_Java_super_this.jpg" alt="1_Java_super_this_memory"></p>
 
-<span class="token comment" spellcheck="true">// 情况二</span>
-<span class="token comment" spellcheck="true">//在这种情况下，右边是60亿，而默认的整数类型是int，其最大范围是约21个亿，这里就本身会产生一个错误，所以需要在其后面加上一个L，此时左边 int， 右边是 long，需要强制类型转换</span>
-<span class="token comment" spellcheck="true">// int num2 = 6000000000;</span>
-
-<span class="token comment" spellcheck="true">// 此时long强制转换为int类型，但是60亿已经超过了int类型范围， 发生数据溢出</span>
-<span class="token keyword">int</span> num2 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> 6000000000L<span class="token punctuation">;</span>
-System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//输出为 1705032704</span>
-</code></pre>
-<ul>
-<li>精度损失</li>
-</ul>
-<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// double --> int, 强制类型转换</span>
-<span class="token keyword">int</span> num3 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token number">3.99</span><span class="token punctuation">;</span>
-System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num3<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 输出为3，不是四舍五入，所有小数位都会被舍弃掉</span>
-</code></pre>
-<h4 id="（2）、byte-short-char这三种类型都可以发生数学运算，例如加法”-”"><a href="#（2）、byte-short-char这三种类型都可以发生数学运算，例如加法”-”" class="headerlink" title="（2）、byte/short/char这三种类型都可以发生数学运算，例如加法”+”"></a>（2）、byte/short/char这三种类型都可以发生数学运算，例如加法”+”</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">char</span> c1 <span class="token operator">=</span> <span class="token string">'A'</span><span class="token punctuation">;</span>
-System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>c1 <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 66</span>
-</code></pre>
-<h4 id="（3）、byte-short-char这三种类型在运算的时候，都会被首先提升为int类型，然后再计算"><a href="#（3）、byte-short-char这三种类型在运算的时候，都会被首先提升为int类型，然后再计算" class="headerlink" title="（3）、byte/short/char这三种类型在运算的时候，都会被首先提升为int类型，然后再计算"></a>（3）、byte/short/char这三种类型在运算的时候，都会被首先提升为<code>int</code>类型，然后再计算</h4><pre class=" language-java"><code class="language-java"><span class="token keyword">byte</span> num3 <span class="token operator">=</span> <span class="token number">40</span><span class="token punctuation">;</span>
-<span class="token keyword">byte</span> num4 <span class="token operator">=</span> <span class="token number">50</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//byte + byte --> int + int --> int</span>
-<span class="token comment" spellcheck="true">// byte res = num3 + num4; // 错误</span>
-<span class="token keyword">int</span> res <span class="token operator">=</span> num3 <span class="token operator">+</span> num4<span class="token punctuation">;</span>
-System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token keyword">short</span> num6 <span class="token operator">=</span> <span class="token number">60</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// byte + short --> int + int --> int</span>
-<span class="token keyword">int</span> res1 <span class="token operator">=</span> num4 <span class="token operator">+</span> num6<span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">// 强制类型转换</span>
-<span class="token keyword">short</span> res2 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">short</span><span class="token punctuation">)</span><span class="token punctuation">(</span>num4 <span class="token operator">+</span> num6<span class="token punctuation">)</span><span class="token punctuation">;</span>
-System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>res1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>res2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<h4 id="（4）、boolean-类型不能发生数据类型转换"><a href="#（4）、boolean-类型不能发生数据类型转换" class="headerlink" title="（4）、boolean 类型不能发生数据类型转换"></a>（4）、boolean 类型不能发生数据类型转换</h4>
                 
             </div>
             <hr/>
@@ -599,7 +510,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wolfwotz-1024.github.io/2021/03/06/4-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">https://wolfwotz-1024.github.io/2021/03/06/4-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</a>
+                    <a href="https://wolfwotz-1024.github.io/2021/03/13/24-Java-KeyWord-%E8%BF%9B%E9%98%B6-super-this/">https://wolfwotz-1024.github.io/2021/03/13/24-Java-KeyWord-%E8%BF%9B%E9%98%B6-super-this/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -810,17 +721,18 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2021/03/07/5-%E8%BF%90%E7%AE%97%E7%AC%A6/">
+                <a href="/2021/03/13/24-Java-KeyWord-%E8%BF%9B%E9%98%B6-super-this/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="5.运算符">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="24.Java_KeyWord 进阶 super this">
                         
-                        <span class="card-title">5.运算符</span>
+                        <span class="card-title">24.Java_KeyWord 进阶 super this</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -830,9 +742,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -845,6 +757,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -863,13 +776,13 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/05/3-%E5%B8%B8%E9%87%8F%E3%80%81%E5%8F%98%E9%87%8F%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+                <a href="/2021/03/13/23-Java-KeyWord-this/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="3.常量、变量和数据类型">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="23.Java-KeyWord this">
                         
-                        <span class="card-title">3.常量、变量和数据类型</span>
+                        <span class="card-title">23.Java-KeyWord this</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -880,7 +793,7 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-13
                             </span>
                         <span class="publish-author">
                             
