@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
+    <meta name="keywords" content="18.Java_KeyWord static, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Hexo</title>
+    <title>18.Java_KeyWord static | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -267,12 +267,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">18.Java_KeyWord static</h1>
                 </div>
             </div>
         </div>
@@ -386,12 +386,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
+                                后端
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -400,7 +413,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-03-03
+                    2021-03-12
                 </div>
                 
 
@@ -409,14 +422,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    73
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    4 Min
                 </div>
                 
 
@@ -436,19 +449,190 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
+                <h1 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h1><p>关于<code>static</code>关键字的使用，它可以用来修饰成员变量和成员方法，被修饰的成员是属于类的，而不单单是属于某个对象的，也就是说，就可以不靠创建对象来调用了。</p>
+<h1 id="二、定义和使用格式"><a href="#二、定义和使用格式" class="headerlink" title="二、定义和使用格式"></a>二、定义和使用格式</h1><h2 id="1、类变量"><a href="#1、类变量" class="headerlink" title="1、类变量"></a>1、类变量</h2><p>当<code>static</code>修饰成员变量时，该变量称为<strong>类变量</strong>，该类的每个对象都共享同一个类变量的值。任何对象都可以更改该类变量的值，但也可以在不创建该类的对象的形况下对类变量进行操作。</p>
+<ul>
+<li>类变量：使用<code>static</code>关键字修饰的成员变量</li>
+</ul>
+<p>定义格式：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">static</span> 数据类型 变量名<span class="token punctuation">;</span>
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
+<p>举例：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">static</span> <span class="token keyword">int</span> numberID<span class="token punctuation">;</span>
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
+<p>比如说，基础班新班开班。学员报道，现在想为每一位新来报到的同学编学号(sid)，从第一名同学开始，sid为1，以此类推。学号必须唯一，连续的，并且与班级的人数相符，这样以便知道，要分配给下一名新同学的学号是多少。这样我们需要一个变量，与单独的每一个学生对象无关，而是与整个班级同学数量有关。</p>
+<p>所以，我们可以定义这样一个静态变量<code>numOfStudent</code>，代码如下：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 学生的id</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> sid<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 类变量，记录学生数量，分配学号</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> numberOfStudent <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token function">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>sid <span class="token operator">=</span> <span class="token operator">++</span>numberOfStudent<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token function">Student</span><span class="token punctuation">(</span>String name<span class="token punctuation">,</span> <span class="token keyword">int</span> age<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 通过numberOfStudent 给学生分配学号</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>sid <span class="token operator">=</span> <span class="token operator">++</span>numberOfStudent<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Student: name="</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">", age="</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">+</span> <span class="token string">", sid= "</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>sid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo01Student</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Student s1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Student s2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">"李四"</span><span class="token punctuation">,</span> <span class="token number">24</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Student s3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">"王五"</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Student s4 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        s1<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        s2<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        s3<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        s4<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>Student<span class="token punctuation">.</span>numberOfStudent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
+<h2 id="2、静态方法"><a href="#2、静态方法" class="headerlink" title="2、静态方法"></a>2、静态方法</h2><p>当<code>static</code>修饰成员方法时，该方法称为<code>类方法</code>。静态方法在生命中有<code>static</code>，建议使用类名来调用，而不需要创建类的对象，调用方式非常简单。</p>
+<ul>
+<li>类方法：使用<code>static</code>关键字修饰的成员方法，习惯称为 <strong>静态方法</strong>。</li>
+</ul>
+<p>定义格式：</p>
+<pre class=" language-java"><code class="language-java">修饰符 <span class="token keyword">static</span> 返回值类型 方法名 <span class="token punctuation">(</span>参数列表<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 执行语句</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>举例：在Student类定义静态方法</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">showNum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"num: "</span> <span class="token operator">+</span> numberOfStudent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li><p>静态方式调用的注意事项：</p>
+<ul>
+<li><font color = orange>静态方法可以直接访问类变量和静态方法</font></li>
+<li><font color = orange>静态方法<strong>不能直接</strong>访问普通成员变量或成员方法。反之，成员方法可以直接访问类变量或静态方法</font></li>
+<li><font color = orange>静态方法中，不能使用<code>this</code>关键字</font></li>
+</ul>
+<blockquote>
+<p>小贴士：静态方法只能访问静态成员。【原因：因为在内存当中是先有了静态内容，后有了非静态内容】</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="3、调用格式"><a href="#3、调用格式" class="headerlink" title="3、调用格式"></a>3、调用格式</h2><p>被<code>static</code>修饰的成员可以并且建议通过<code>类名直接访问</code>。虽然也可以通过对象名访问静态成员，原因即多个对象均属于一个类，共享使用同一个静态成员，但是不建议，会出现警告信息。</p>
+<p>格式：</p>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 访问变量名</span>
+类名<span class="token punctuation">.</span>类变量名<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 调用静态方法</span>
+类名<span class="token punctuation">.</span>静态方法名<span class="token punctuation">(</span>参数<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo02Student</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 访问类变量</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>Student<span class="token punctuation">.</span>numberOfStudent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token comment" spellcheck="true">// 调用静态方法</span>
+        Student<span class="token punctuation">.</span><span class="token function">showNum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="三、静态原理图解"><a href="#三、静态原理图解" class="headerlink" title="三、静态原理图解"></a>三、静态原理图解</h1><p><code>static</code>修饰的内容：</p>
+<ul>
+<li>是随着类的加载而加载的，而且只加载一次</li>
+<li>存储于一块固定的内存区域（静态区），所以可以直接被类名调用</li>
+<li>它优先于对象存储，所以，可以被所有对象共享</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">package</span> cn<span class="token punctuation">.</span>wolfwotz<span class="token punctuation">.</span>day05<span class="token punctuation">.</span>Demo05<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">static</span> String room<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token function">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token function">Student</span><span class="token punctuation">(</span>String name<span class="token punctuation">,</span> <span class="token keyword">int</span> age<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> String <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span>String name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setAge</span><span class="token punctuation">(</span><span class="token keyword">int</span> age<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">package</span> cn<span class="token punctuation">.</span>wolfwotz<span class="token punctuation">.</span>day05<span class="token punctuation">.</span>Demo05<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Demo03Student</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 首先设置以下教室，这是静态的</span>
+        Student<span class="token punctuation">.</span>room <span class="token operator">=</span> <span class="token string">"101教室"</span><span class="token punctuation">;</span>
+
+        Student one <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token number">26</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"one的姓名： "</span> <span class="token operator">+</span> one<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"one的年龄： "</span> <span class="token operator">+</span> one<span class="token punctuation">.</span><span class="token function">getAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"one的教室： "</span> <span class="token operator">+</span> Student<span class="token punctuation">.</span>room<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"========"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        Student two <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Student</span><span class="token punctuation">(</span><span class="token string">"李四"</span><span class="token punctuation">,</span> <span class="token number">35</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"two的姓名： "</span> <span class="token operator">+</span> two<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"two的年龄： "</span> <span class="token operator">+</span> two<span class="token punctuation">.</span><span class="token function">getAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"two的教室： "</span> <span class="token operator">+</span> Student<span class="token punctuation">.</span>room<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><img src="/images/25_Java_Static_Memory.jpg" alt="1_Java_static_memory"></p>
+<h1 id="四、静态代码块"><a href="#四、静态代码块" class="headerlink" title="四、静态代码块"></a>四、静态代码块</h1><ul>
+<li>静态代码块：定义在成员位置，使用<code>static</code>修饰的代码块{}.<ul>
+<li>位置：类中方法外</li>
+<li>执行：<font color=red>随着类的加载而执行而且执行一次，优先于main方法和构造方法的执行</font></li>
+</ul>
+</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">className</span><span class="token punctuation">{</span>
+    <span class="token keyword">static</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 执行语句</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>作用：给类变量进行初始化赋值，用法如下：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Game</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> number<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> ArrayList<span class="token operator">&lt;</span>String<span class="token operator">></span> list<span class="token punctuation">;</span>
+    
+    <span class="token keyword">static</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 给类变量赋值</span>
+        number <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span>String<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 添加原始到集合中</span>
+        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"张三"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"李四"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
 
                 
             </div>
@@ -475,7 +659,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wolfwotz-1024.github.io/2021/03/03/hello-world/">https://wolfwotz-1024.github.io/2021/03/03/hello-world/</a>
+                    <a href="https://wolfwotz-1024.github.io/2021/03/12/18-Java-KeyWord-static/">https://wolfwotz-1024.github.io/2021/03/12/18-Java-KeyWord-static/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -512,7 +696,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -686,13 +874,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2021/03/04/1-Java%E8%AF%AD%E8%A8%80%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">
+                <a href="/2021/03/13/19-Java-API-Arrays/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="1.Java语言开发环境">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="19.Java-API Arrays">
                         
-                        <span class="card-title">1.Java语言开发环境</span>
+                        <span class="card-title">19.Java-API Arrays</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -703,7 +891,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-04
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-13
                         </span>
                         <span class="publish-author">
                             
@@ -732,16 +920,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/03/hello-world/">
+                <a href="/2021/03/12/17-Java-API-String/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="17.Java_API String">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">17.Java_API String</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -752,17 +940,28 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-12
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Wolfwotz
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
+                                    后端
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

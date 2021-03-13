@@ -6,7 +6,7 @@
   <link href="https://wolfwotz-1024.github.io/atom.xml" rel="self"/>
   
   <link href="https://wolfwotz-1024.github.io/"/>
-  <updated>2021-03-12T10:39:29.794Z</updated>
+  <updated>2021-03-13T04:04:52.949Z</updated>
   <id>https://wolfwotz-1024.github.io/</id>
   
   <author>
@@ -15,6 +15,81 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>20.Java-API Math</title>
+    <link href="https://wolfwotz-1024.github.io/2021/03/13/20-Java-API-Math/"/>
+    <id>https://wolfwotz-1024.github.io/2021/03/13/20-Java-API-Math/</id>
+    <published>2021-03-13T03:56:00.000Z</published>
+    <updated>2021-03-13T04:04:52.949Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、概述&quot;&gt;&lt;a href=&quot;#一、概述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="后端" scheme="https://wolfwotz-1024.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="Java" scheme="https://wolfwotz-1024.github.io/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>19.Java-API Arrays</title>
+    <link href="https://wolfwotz-1024.github.io/2021/03/13/19-Java-API-Arrays/"/>
+    <id>https://wolfwotz-1024.github.io/2021/03/13/19-Java-API-Arrays/</id>
+    <published>2021-03-13T03:19:29.000Z</published>
+    <updated>2021-03-13T03:49:32.894Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、概述&quot;&gt;&lt;a href=&quot;#一、概述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="后端" scheme="https://wolfwotz-1024.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="Java" scheme="https://wolfwotz-1024.github.io/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>18.Java_KeyWord static</title>
+    <link href="https://wolfwotz-1024.github.io/2021/03/12/18-Java-KeyWord-static/"/>
+    <id>https://wolfwotz-1024.github.io/2021/03/12/18-Java-KeyWord-static/</id>
+    <published>2021-03-12T12:54:15.000Z</published>
+    <updated>2021-03-13T03:11:09.136Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、概述&quot;&gt;&lt;a href=&quot;#一、概述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="后端" scheme="https://wolfwotz-1024.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="Java" scheme="https://wolfwotz-1024.github.io/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>17.Java_API String</title>
@@ -445,27 +520,6 @@
     
     
     <category term="Java" scheme="https://wolfwotz-1024.github.io/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://wolfwotz-1024.github.io/2021/03/03/hello-world/"/>
-    <id>https://wolfwotz-1024.github.io/2021/03/03/hello-world/</id>
-    <published>2021-03-03T01:57:46.598Z</published>
-    <updated>2021-03-03T01:57:46.598Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
     
   </entry>
   
