@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
+    <meta name="keywords" content="28.Java_KeyWord_final, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Hexo</title>
+    <title>28.Java_KeyWord_final | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -267,12 +267,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">28.Java_KeyWord_final</h1>
                 </div>
             </div>
         </div>
@@ -386,12 +386,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
+                                后端
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -400,7 +413,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-03-03
+                    2021-03-16
                 </div>
                 
 
@@ -409,14 +422,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    73
+                    679
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    2 Min
                 </div>
                 
 
@@ -436,19 +449,94 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
+                <h1 id="一、概述"><a href="#一、概述" class="headerlink" title="一、概述"></a>一、概述</h1><p>学习了继承后，我们知道，子类可以在父类的基础上改写父类的内容，比如，方法重写。那么我们能不能随意的继承API中提供的类，改写其内容呢？显然不合适，为了避免这种随意改写的情况，Java提供了<code>final</code>关键字，用于修饰不可改变内容。</p>
+<ul>
+<li>final：不可改变。用于修饰类、方法和变量<ul>
+<li>类：被修饰的类，不能被继承</li>
+<li>方法：被修饰的方法，不能被重写</li>
+<li>变量：被修饰的变量，不能被重新赋值</li>
+</ul>
+</li>
+</ul>
+<h1 id="二、使用方式"><a href="#二、使用方式" class="headerlink" title="二、使用方式"></a>二、使用方式</h1><h2 id="1、修饰类"><a href="#1、修饰类" class="headerlink" title="1、修饰类"></a>1、修饰类</h2><pre class=" language-java"><code class="language-java"><span class="token keyword">final</span> <span class="token keyword">class</span> 类名<span class="token punctuation">{</span>
+    
+<span class="token punctuation">}</span>
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
+<p>查询API发现像<code>public final class String</code>、<code>public final class Math</code>、<code>public final class Scanner</code>等，很多我们学习过的类都是被<code>final</code>修饰的，目的就是提供我们使用，而不让我们改变其内容。</p>
+<h2 id="2、修饰方法"><a href="#2、修饰方法" class="headerlink" title="2、修饰方法"></a>2、修饰方法</h2><pre class=" language-java"><code class="language-java">修饰符 <span class="token keyword">final</span> 返回值类型 方法名<span class="token punctuation">(</span>参数列表<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 方法体</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
+<p>重写被<code>final</code>修饰的方法，编译时就会报错。</p>
+<h2 id="3、修饰变量"><a href="#3、修饰变量" class="headerlink" title="3、修饰变量"></a>3、修饰变量</h2><h3 id="1-、局部变量——基本类型"><a href="#1-、局部变量——基本类型" class="headerlink" title="(1)、局部变量——基本类型"></a>(1)、局部变量——基本类型</h3><p>基本类型的局部变量，被<code>final</code>修饰后，只能赋值一次，不能再改变。</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FinalDemo01</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 声明变量，使用final修饰</span>
+        <span class="token keyword">final</span> <span class="token keyword">int</span> a<span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 第一次赋值</span>
+        a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 第二次赋值</span>
+        a <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 报错，不可重新赋值</span>
+        
+        <span class="token comment" spellcheck="true">// 声明变量，直接赋值，使用final修饰</span>
+        <span class="token keyword">final</span> <span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 第二次赋值</span>
+        b <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 报错，不可重新赋值</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
+<p>思考，如下两种写法，哪种可以通过编译？</p>
+<p>写法1：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">final</span> <span class="token keyword">int</span> c <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    c <span class="token operator">=</span> i<span class="token punctuation">;</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>写法2：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">final</span> <span class="token keyword">int</span> c <span class="token operator">=</span> i<span class="token punctuation">;</span>
+    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>根据<code>final</code>的定义，写法1报错，写法2正确，为什么能通过编译？因为每次循环，都是一次新的变量c。</p>
+<h3 id="2-、局部变量——引用类型"><a href="#2-、局部变量——引用类型" class="headerlink" title="(2)、局部变量——引用类型"></a>(2)、局部变量——引用类型</h3><p>引用类型的局部变量，被final修饰后，只能指向一个对象，地址不能再被更改，但是不影响对象内部的成员变量值的修改，代码如下：</p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FinalDemo02</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 创建User对象</span>
+        <span class="token keyword">final</span> User u <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 创建另一个User对象</span>
+        u <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 报错，指向了新的对象，地址值改变</span>
+        
+        <span class="token comment" spellcheck="true">// 调用setName方法</span>
+        u<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">"张三"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="3-、成员变量"><a href="#3-、成员变量" class="headerlink" title="(3)、成员变量"></a>(3)、<font color = red>成员变量</font></h3><p><font color = red>成员变量涉及到初始化的问题，初始化方式有两种，只能二选一：</font></p>
+<ul>
+<li>显式初始化</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span><span class="token punctuation">{</span>
+    <span class="token keyword">final</span> String USERNAME <span class="token operator">=</span> <span class="token string">"张三"</span><span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li>构造方法初始化</li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span><span class="token punctuation">{</span>
+    <span class="token keyword">final</span> String USERNAME<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token function">User</span><span class="token punctuation">(</span>String username<span class="token punctuation">,</span> <span class="token keyword">int</span> age<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>USERNAME <span class="token operator">=</span> username<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>age <span class="token operator">=</span> age<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p>被final修饰的常量名称，一般都有书写规范，所有字母都大写。</p>
+</blockquote>
 
                 
             </div>
@@ -475,7 +563,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wolfwotz-1024.github.io/2021/03/03/hello-world/">https://wolfwotz-1024.github.io/2021/03/03/hello-world/</a>
+                    <a href="https://wolfwotz-1024.github.io/2021/03/16/28-Java-KeyWord-final/">https://wolfwotz-1024.github.io/2021/03/16/28-Java-KeyWord-final/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -512,7 +600,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -686,13 +778,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2021/03/04/1-Java%E8%AF%AD%E8%A8%80%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">
+                <a href="/2021/03/16/29-Java-%E6%9D%83%E9%99%90%E4%BF%AE%E9%A5%B0%E7%AC%A6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="1.Java语言开发环境">
+                        <img src="/medias/featureimages/30.jpg" class="responsive-img" alt="29.Java_权限修饰符">
                         
-                        <span class="card-title">1.Java语言开发环境</span>
+                        <span class="card-title">29.Java_权限修饰符</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -703,7 +795,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-04
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-16
                         </span>
                         <span class="publish-author">
                             
@@ -732,16 +824,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/03/hello-world/">
+                <a href="/2021/03/14/27-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%89%B9%E5%BE%81%E2%80%94%E2%80%94%E5%A4%9A%E6%80%81%E6%80%A7/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="27.面向对象特征——多态性">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">27.面向对象特征——多态性</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -752,17 +844,28 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-14
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Wolfwotz
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
+                                    后端
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
